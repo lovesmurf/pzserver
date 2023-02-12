@@ -5,8 +5,10 @@ services:
     image: cyrale/project-zomboid
     restart: unless-stopped
     environment:
-      SERVER_NAME: "pzserver"
-      ADMIN_PASSWORD: "1488"
+      SERVER_NAME: "GLORYHOLE"
+      SERVER_PUBLIC_NAME: "GLORY HOLE"
+      SERVER_PASSWORD: "helloworldz2"
+      ADMIN_PASSWORD: "helloworldzxc"
     ports:
       - "8766:8766/udp"
       - "8767:8767/udp"
@@ -16,3 +18,4 @@ services:
       - "27015:27015"
     volumes:
       - ./server-data:/server-data
+      
