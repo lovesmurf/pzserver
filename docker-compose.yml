@@ -10,12 +10,15 @@ services:
       SERVER_PASSWORD: "helloworldz2"
       ADMIN_PASSWORD: "helloworldzxc"
     ports:
-      - "8766:8766/udp"
-      - "8767:8767/udp"
-      - "16261:16261/udp"
-      - "16262-16272:16262-16272"
-      - "16262:16272/udp"
-      - "27015:27015"
+      - target: 16261
+        published: 16261
+        protocol: udp
+      - target: 16262
+        published: 16262
+        protocol: udp
+      - target: 27015
+        published: 27015
+        protocol: tcp
     volumes:
       - ./server-data:/server-data
       
